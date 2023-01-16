@@ -1,4 +1,4 @@
-package cn.seheum.springframework.beans.factory;
+package cn.seheum.springframework.beans;
 
 public class PropertyValue {
     private final String name;

@@ -1,8 +1,8 @@
 package cn.seheum.springframework.test;
 
 
-import cn.seheum.springframework.beans.factory.PropertyValue;
-import cn.seheum.springframework.beans.factory.PropertyValues;
+import cn.seheum.springframework.beans.PropertyValue;
+import cn.seheum.springframework.beans.PropertyValues;
 import cn.seheum.springframework.beans.factory.config.BeanDefinition;
 import cn.seheum.springframework.beans.factory.config.BeanReference;
 import cn.seheum.springframework.beans.factory.support.DefaultListableBeanFactory;

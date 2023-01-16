@@ -1,6 +1,6 @@
 package cn.seheum.springframework.beans.factory.config;
 
-import cn.seheum.springframework.beans.factory.PropertyValues;
+import cn.seheum.springframework.beans.PropertyValues;
 
 public class BeanDefinition {
     private Class beanClass;

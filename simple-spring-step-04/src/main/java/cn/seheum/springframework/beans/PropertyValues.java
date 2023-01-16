@@ -1,4 +1,4 @@
-package cn.seheum.springframework.beans.factory;
+package cn.seheum.springframework.beans;
 
 import java.util.ArrayList;
 import java.util.List;

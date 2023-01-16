@@ -2,8 +2,8 @@ package cn.seheum.springframework.beans.factory.support;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.seheum.springframework.beans.BeansException;
-import cn.seheum.springframework.beans.factory.PropertyValue;
-import cn.seheum.springframework.beans.factory.PropertyValues;
+import cn.seheum.springframework.beans.PropertyValue;
+import cn.seheum.springframework.beans.PropertyValues;
 import cn.seheum.springframework.beans.factory.config.BeanDefinition;
 import cn.seheum.springframework.beans.factory.config.BeanReference;
 

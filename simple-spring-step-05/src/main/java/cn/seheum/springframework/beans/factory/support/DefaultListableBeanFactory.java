@@ -1,12 +1,14 @@
 package cn.seheum.springframework.beans.factory.support;
 
 import cn.seheum.springframework.beans.BeansException;
+import cn.seheum.springframework.beans.factory.ConfigurableListableBeanFactory;
 import cn.seheum.springframework.beans.factory.config.BeanDefinition;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFactory implements BeanDefinitionRegistry {
+public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFactory implements BeanDefinitionRegistry, ConfigurableListableBeanFactory {
 
     private Map<String,BeanDefinition> beanDefinitionMap = new HashMap<>();
 
@@ -18,7 +20,32 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
     }
 
     @Override
+    public boolean containsBeanDefinition(String beanName) {
+        return beanDefinitionMap.containsKey(beanName);
+    }
+
+
+    @Override
+    public <T> Map<String, T> getBeansOfType(Class<T> type) throws BeansException {
+        Map<String, T> result =  new HashMap<>();
+        beanDefinitionMap.forEach((beanName,beanDefinition)-> {
+            Class beanClass = beanDefinition.getBeanClass();
+            if(type.isAssignableFrom(beanClass)) {
+                result.put(beanName,(T)getBean(beanName));
+            }
+        });
+        return result;
+    }
+
+    @Override
+    public String[] getBeanDefinitionNames() {
+        return beanDefinitionMap.keySet().toArray(new String[0]);
+    }
+
+    @Override
     public void registryBeanDefinition(String beanName, BeanDefinition beanDefinition) {
         beanDefinitionMap.put(beanName,beanDefinition);
     }
+
+
 }

@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="simple-spring-step-05" />
+        <module name="simple-spring-step-04" />
         <module name="simple-spring-step-03" />
         <module name="simple-spring-step-02" />
         <module name="simple-spring-step-01" />
@@ -15,6 +17,8 @@
       <module name="simple-spring-step-01" target="1.8" />
       <module name="simple-spring-step-02" target="1.8" />
       <module name="simple-spring-step-03" target="1.8" />
+      <module name="simple-spring-step-04" target="1.8" />
+      <module name="simple-spring-step-05" target="1.8" />
       <module name="Spring-simple-implementation" target="8" />
     </bytecodeTargetLevel>
   </component>

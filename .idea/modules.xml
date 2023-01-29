@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/simple-spring-step-01/simple-spring-step-01.iml" filepath="$PROJECT_DIR$/simple-spring-step-01/simple-spring-step-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-spring-step-02/simple-spring-step-02.iml" filepath="$PROJECT_DIR$/simple-spring-step-02/simple-spring-step-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-spring-step-03/simple-spring-step-03.iml" filepath="$PROJECT_DIR$/simple-spring-step-03/simple-spring-step-03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-spring-step-04/simple-spring-step-04.iml" filepath="$PROJECT_DIR$/simple-spring-step-04/simple-spring-step-04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-spring-step-05/simple-spring-step-05.iml" filepath="$PROJECT_DIR$/simple-spring-step-05/simple-spring-step-05.iml" />
     </modules>
   </component>
 </project>

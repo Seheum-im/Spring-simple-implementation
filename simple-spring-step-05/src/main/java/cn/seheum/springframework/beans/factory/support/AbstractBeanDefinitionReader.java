@@ -3,6 +3,9 @@ package cn.seheum.springframework.beans.factory.support;
 import cn.seheum.springframework.core.io.DefaultResourceLoader;
 import cn.seheum.springframework.core.io.ResourceLoader;
 
+/**
+ *  资源解析和注册的抽象类实现
+ */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader {
 
     private final BeanDefinitionRegistry registry;

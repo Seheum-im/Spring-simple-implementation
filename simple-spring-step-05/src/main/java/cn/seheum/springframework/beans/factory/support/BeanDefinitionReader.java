@@ -4,6 +4,9 @@ import cn.seheum.springframework.beans.BeansException;
 import cn.seheum.springframework.core.io.Resource;
 import cn.seheum.springframework.core.io.ResourceLoader;
 
+/**
+ * 资源解析和注册部分，定义接口
+ */
 public interface BeanDefinitionReader {
 
     BeanDefinitionRegistry getRegistry();

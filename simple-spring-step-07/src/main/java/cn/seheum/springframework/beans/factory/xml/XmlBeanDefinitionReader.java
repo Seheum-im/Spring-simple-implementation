@@ -92,10 +92,9 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
             //定义Bean
             BeanDefinition beanDefinition = new BeanDefinition(clazz);
-
             //额外设置到beanDefinition中
             beanDefinition.setInitMethodName(initMethod);
-            beanDefinition.setInitMethodName(destroyMethod);
+            beanDefinition.setDestroyMethodName(destroyMethod);
 
             //读取属性并填充
             for (int j = 0; j < bean.getChildNodes().getLength(); j++) {

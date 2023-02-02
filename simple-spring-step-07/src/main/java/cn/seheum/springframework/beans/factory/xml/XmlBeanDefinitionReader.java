@@ -94,6 +94,8 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             BeanDefinition beanDefinition = new BeanDefinition(clazz);
             //额外设置到beanDefinition中
             beanDefinition.setInitMethodName(initMethod);
+            //这是之前犯下的错，这样会导致反射生成的Bean 实例的属性方法不对，从而导致后续的一连串错误
+//            beanDefinition.setInitMethodName(destroyMethod);
             beanDefinition.setDestroyMethodName(destroyMethod);
 
             //读取属性并填充

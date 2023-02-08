@@ -11,6 +11,7 @@
         <module name="simple-spring-step-03" />
         <module name="simple-spring-step-02" />
         <module name="simple-spring-step-01" />
+        <module name="simple-spring-step-10" />
         <module name="simple-spring-step-09" />
         <module name="simple-spring-step-08" />
         <module name="simple-spring-step-07" />
@@ -27,6 +28,7 @@
       <module name="simple-spring-step-07" target="1.8" />
       <module name="simple-spring-step-08" target="1.8" />
       <module name="simple-spring-step-09" target="1.8" />
+      <module name="simple-spring-step-10" target="1.8" />
       <module name="Spring-simple-implementation" target="8" />
     </bytecodeTargetLevel>
   </component>

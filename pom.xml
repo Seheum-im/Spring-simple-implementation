@@ -9,7 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>simple-spring-step-12</module>
-        <module>simple-srping-step-13</module>
+        <module>simple-spring-step-13</module>
+        <module>simple-spring-step-14</module>
     </modules>
 
     <dependencies>

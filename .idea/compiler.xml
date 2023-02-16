@@ -6,19 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="simple-spring-step-08" />
+        <module name="simple-spring-step-07" />
+        <module name="simple-spring-step-06" />
         <module name="simple-spring-step-05" />
         <module name="simple-spring-step-04" />
         <module name="simple-spring-step-03" />
         <module name="simple-spring-step-02" />
         <module name="simple-spring-step-01" />
+        <module name="simple-spring-step-14" />
+        <module name="simple-spring-step-13" />
         <module name="simple-spring-step-12" />
         <module name="simple-spring-step-11" />
         <module name="simple-spring-step-10" />
         <module name="simple-srping-step-13" />
         <module name="simple-spring-step-09" />
-        <module name="simple-spring-step-08" />
-        <module name="simple-spring-step-07" />
-        <module name="simple-spring-step-06" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -34,6 +36,8 @@
       <module name="simple-spring-step-10" target="1.8" />
       <module name="simple-spring-step-11" target="1.8" />
       <module name="simple-spring-step-12" target="1.8" />
+      <module name="simple-spring-step-13" target="1.8" />
+      <module name="simple-spring-step-14" target="1.8" />
       <module name="simple-srping-step-13" target="1.8" />
       <module name="Spring-simple-implementation" target="1.8" />
     </bytecodeTargetLevel>

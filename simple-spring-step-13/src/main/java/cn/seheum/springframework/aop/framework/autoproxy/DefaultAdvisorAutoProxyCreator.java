@@ -2,7 +2,7 @@ package cn.seheum.springframework.aop.framework.autoproxy;
 
 import cn.seheum.springframework.aop.*;
 import cn.seheum.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor;
-import cn.seheum.springframework.aop.framework.ProxyFactory;
+import cn.seheum.springframework.aop.framework.*;
 import cn.seheum.springframework.beans.BeansException;
 import cn.seheum.springframework.beans.factory.BeanFactory;
 import cn.seheum.springframework.beans.factory.BeanFactoryAware;

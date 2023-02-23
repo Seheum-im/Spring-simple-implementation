@@ -20,20 +20,20 @@ public class ApiTest {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         //2、 UserDao 注册
-        beanFactory.registryBeanDefinition("userDao",new BeanDefinition(UserDao.class));
+        beanFactory.registryBeanDefinition("uD",new BeanDefinition(UserDao.class));
 
 
         //3、UserService 设置属性[uId、userDao]
         PropertyValues propertyValues = new PropertyValues();
         propertyValues.addPropertyValue(new PropertyValue("uId","10001"));
-        propertyValues.addPropertyValue(new PropertyValue("userDao",new BeanReference("userDao")));
+        propertyValues.addPropertyValue(new PropertyValue("userDao",new BeanReference("uD")));
 
         //4、UserService 注入 容器
         BeanDefinition beanDefinition = new BeanDefinition(UserService.class, propertyValues);
-        beanFactory.registryBeanDefinition("userService",beanDefinition);
+        beanFactory.registryBeanDefinition("uS",beanDefinition);
 
         //5、UserService 获取bean
-        UserService userService = (UserService) beanFactory.getBean("userService");
+        UserService userService = (UserService) beanFactory.getBean("uS");
         userService.queryInfo();
 
     }

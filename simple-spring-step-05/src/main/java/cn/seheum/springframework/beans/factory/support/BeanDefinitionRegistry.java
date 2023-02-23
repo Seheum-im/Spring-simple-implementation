@@ -18,7 +18,7 @@ public interface BeanDefinitionRegistry {
      * @return
      * @throws BeansException
      */
-   BeanDefinition getBeanDefinition(String beanName) throws BeansException;
+//   BeanDefinition getBeanDefinition(String beanName) throws BeansException;
     /**
      * 判断是否包含指定名称的BeanDefinition
      * @param beanName
@@ -30,5 +30,5 @@ public interface BeanDefinitionRegistry {
      *
      * 返回注册表中所有的Bean名称
      */
-   String[] getBeanDefinitionNames();
+//   String[] getBeanDefinitionNames();
 }

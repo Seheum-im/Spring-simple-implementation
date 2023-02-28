@@ -9,6 +9,9 @@ import cn.seheum.springframework.core.io.DefaultResourceLoader;
 
 import java.util.Map;
 
+/**
+ * 经典的设计模式，将需要使用到的ResourceLoader让最上层的Context来继承，避免子类重复实现ResourceLoader造成冗余
+ */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
 
@@ -38,12 +41,14 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
 
 
     private void invokeBeanFactoryPostProcessors(ConfigurableListableBeanFactory beanFactory) {
+        //这里是对BeanFactoryProcessor 创建实例Bean
         Map<String, BeanFactoryPostProcessor> beanFactoryPostProcessorMap  = beanFactory.getBeansOfType(BeanFactoryPostProcessor.class);
         for (BeanFactoryPostProcessor beanFactoryPostProcessor : beanFactoryPostProcessorMap.values()) {
             beanFactoryPostProcessor.postProcessBeanFactory(beanFactory);
         }
     }
     private void registerBeanPostProcessors(ConfigurableListableBeanFactory beanFactory) {
+        //这里是对BeanPostProcessor创建实例Bean
         Map<String, BeanPostProcessor> beanPostProcessorMap  = beanFactory.getBeansOfType(BeanPostProcessor.class);
         for (BeanPostProcessor beanPostProcessor  : beanPostProcessorMap.values()) {
             beanFactory.addBeanPostProcessor(beanPostProcessor);

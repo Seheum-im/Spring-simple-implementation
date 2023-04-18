@@ -60,18 +60,25 @@ public class DefaultAdvisorAutoProxyCreator implements InstantiationAwareBeanPos
 
             AdvisedSupport advisedSupport = new AdvisedSupport();
 
-            TargetSource targetSource = null;
 
-
-            try {
-                targetSource = new TargetSource(bean.getClass().getDeclaredConstructor().newInstance());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            TargetSource targetSource = new TargetSource(bean);
             advisedSupport.setTargetSource(targetSource);
-            advisedSupport.setMethodMatcher(advisor.getPointcut().getMethodMatcher());
             advisedSupport.setMethodInterceptor((MethodInterceptor) advisor.getAdvice());
+            advisedSupport.setMethodMatcher(advisor.getPointcut().getMethodMatcher());
             advisedSupport.setProxyTargetClass(false);
+            //以下注释掉的是出bug的代码
+//            TargetSource targetSource = null;
+//
+//
+//            try {
+//                targetSource = new TargetSource(bean.getClass().getDeclaredConstructor().newInstance());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            advisedSupport.setTargetSource(targetSource);
+//            advisedSupport.setMethodMatcher(advisor.getPointcut().getMethodMatcher());
+//            advisedSupport.setMethodInterceptor((MethodInterceptor) advisor.getAdvice());
+//            advisedSupport.setProxyTargetClass(false);
 
             //返回代理对象
             return new ProxyFactory(advisedSupport).getProxy();

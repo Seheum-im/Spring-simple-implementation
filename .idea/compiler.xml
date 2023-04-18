@@ -14,13 +14,13 @@
         <module name="simple-spring-step-03" />
         <module name="simple-spring-step-02" />
         <module name="simple-spring-step-01" />
+        <module name="simple-spring-step-16" />
         <module name="simple-spring-step-15" />
         <module name="simple-spring-step-14" />
         <module name="simple-spring-step-13" />
         <module name="simple-spring-step-12" />
         <module name="simple-spring-step-11" />
         <module name="simple-spring-step-10" />
-        <module name="simple-srping-step-13" />
         <module name="simple-spring-step-09" />
       </profile>
     </annotationProcessing>
@@ -40,6 +40,7 @@
       <module name="simple-spring-step-13" target="1.8" />
       <module name="simple-spring-step-14" target="1.8" />
       <module name="simple-spring-step-15" target="1.8" />
+      <module name="simple-spring-step-16" target="1.8" />
       <module name="simple-srping-step-13" target="1.8" />
       <module name="Spring-simple-implementation" target="1.8" />
     </bytecodeTargetLevel>

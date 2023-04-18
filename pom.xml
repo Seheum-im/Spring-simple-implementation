@@ -12,6 +12,7 @@
         <module>simple-spring-step-13</module>
         <module>simple-spring-step-14</module>
         <module>simple-spring-step-15</module>
+        <module>simple-spring-step-16</module>
     </modules>
 
     <dependencies>

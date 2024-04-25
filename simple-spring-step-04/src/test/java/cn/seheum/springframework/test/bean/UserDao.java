@@ -13,6 +13,23 @@ public class UserDao {
         hashMap.put("10003","锐雯");
     }
 
+    public UserDao() {
+    }
+
+    private String addr;
+
+    public UserDao(String addr) {
+        this.addr = addr;
+    }
+
+    public String getAddr() {
+        return addr;
+    }
+
+    public void setAddr(String addr) {
+        this.addr = addr;
+    }
+
     public String queryUserName(String uId) {
         return hashMap.get(uId);
     }

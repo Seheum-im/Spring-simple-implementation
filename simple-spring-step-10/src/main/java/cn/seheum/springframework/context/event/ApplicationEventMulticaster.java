@@ -3,6 +3,9 @@ package cn.seheum.springframework.context.event;
 import cn.seheum.springframework.context.ApplicationEvent;
 import cn.seheum.springframework.context.ApplicationListener;
 
+/**
+ * 注册Listener 和 移除Listener，以及广播事件
+ */
 public interface ApplicationEventMulticaster {
     /**
      * Add a listener to be notified of all events.

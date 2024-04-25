@@ -5,6 +5,7 @@ import cn.seheum.springframework.beans.PropertyValue;
 import cn.seheum.springframework.beans.PropertyValues;
 import cn.seheum.springframework.beans.factory.config.BeanDefinition;
 import cn.seheum.springframework.beans.factory.config.BeanReference;
+import cn.seheum.springframework.beans.factory.support.BeanDefinitionReader;
 import cn.seheum.springframework.beans.factory.support.DefaultListableBeanFactory;
 import cn.seheum.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import cn.seheum.springframework.core.io.DefaultResourceLoader;
@@ -78,7 +79,7 @@ public class ApiTest {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         // 2. 读取配置文件&注册Bean
-        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
+        BeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         reader.loadBeanDefinitions("classpath:spring.xml");
 
         // 3. 获取Bean对象调用方法

@@ -7,4 +7,5 @@
 
     <bean class="cn.seheum.springframework.test.event.ContextClosedEventListener"/>
 
+    <bean class="cn.seheum.springframework.test.event.OnlyForContextRefreshedEventListener"/>
 </beans>

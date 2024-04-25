@@ -48,8 +48,10 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
             return beanInstance;
         }
 
+        // 先去缓存中拿
         Object object = getCachedObjectForFactoryBean(beanName);
 
+        // 如果缓存中拿不到，则直接从FactoryBean中拿
         if(object == null) {
             FactoryBean<?> factoryBean = (FactoryBean<?>) beanInstance;
             object = getObjectFromFactoryBean(factoryBean,beanName);

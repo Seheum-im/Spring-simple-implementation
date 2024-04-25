@@ -1,5 +1,8 @@
 package cn.seheum.springframework.context.support;
 
+/**
+ * 对外提供应用上下文的函数
+ */
 public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext {
 
     private String[] configLocations;

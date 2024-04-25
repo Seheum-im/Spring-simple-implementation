@@ -11,10 +11,15 @@ import java.util.Map;
 
 /**
  * 经典的设计模式，将需要使用到的ResourceLoader让最上层的Context来继承，避免子类重复实现ResourceLoader造成冗余
+ * 同时采用了模板模式，制定了refresh时的流程，让子类去实现流程中的具体部分
  */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
 
+    /**
+     * 将暴露在Test的 BeanFactory实例化，Bean对象的定义、属性填充和定义封装起来
+     * @throws BeansException
+     */
     @Override
     public void refresh() throws BeansException {
         //1、创建BeanFactory，并加载BeanDefinition

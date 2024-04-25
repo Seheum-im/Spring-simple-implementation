@@ -15,6 +15,13 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
         return doGetBean(name, args);
     }
 
+    /**
+     * 所有重载的接口最终都会到这个函数中实例化Bean对象
+     * @param name
+     * @param args
+     * @param <T>
+     * @return
+     */
     protected <T> T doGetBean(final String name, final Object[] args) {
         Object bean = getSingleton(name);
         if (bean != null) {

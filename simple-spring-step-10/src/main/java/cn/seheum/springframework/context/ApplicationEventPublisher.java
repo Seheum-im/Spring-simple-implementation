@@ -1,5 +1,8 @@
 package cn.seheum.springframework.context;
 
+/**
+ * 应用事件发布者
+ */
 public interface ApplicationEventPublisher {
 
     /**

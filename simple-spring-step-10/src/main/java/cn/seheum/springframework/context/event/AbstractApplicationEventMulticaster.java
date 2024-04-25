@@ -32,15 +32,28 @@ public abstract class AbstractApplicationEventMulticaster implements Application
         this.beanFactory = beanFactory;
     }
 
+    /**
+     * 获取应用监听器，判断该Listener是否支持该事件,把符合该事件的监听器作为集合返回
+     * @param event
+     * @return
+     */
     protected Collection<ApplicationListener> getApplicationListeners(ApplicationEvent event) {
         List<ApplicationListener> allListeners = new ArrayList<>();
         for (ApplicationListener<ApplicationEvent> listener : applicationListeners) {
-            if(supportsEvent(listener,event)) allListeners.add(listener);
+            if(supportsEvent(listener,event)){
+                allListeners.add(listener);
+            }
         }
         return allListeners;
     }
 
 
+    /**
+     * 判断该Listener是否支持该事件
+     * @param applicationListener
+     * @param event
+     * @return
+     */
     protected boolean supportsEvent(ApplicationListener<ApplicationEvent> applicationListener,ApplicationEvent event) {
         Class<? extends ApplicationListener> listenerClass = applicationListener.getClass();
 

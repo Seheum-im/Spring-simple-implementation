@@ -11,6 +11,10 @@ public class ProxyBeanFactory implements FactoryBean<IUserDao> {
     @Override
     public IUserDao getObject() throws Exception {
         InvocationHandler handler = ((proxy, method, args) -> {
+
+            // 添加排除方法
+            if ("toString".equals(method.getName())) return this.toString();
+
             Map<String, String> hashMap = new HashMap<>();
             hashMap.put("10001", "王大锤");
             hashMap.put("10002", "小木头");

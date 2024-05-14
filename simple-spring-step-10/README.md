@@ -24,13 +24,16 @@
 - 应用上下文刷新事件，当ApplicationContext初始化或者刷新时触发事件
 
 5）ApplicationEventPublisher
-- 应用事件发布者接口，制定发布事件接口，通知所有的监听者listeners
+- 应用事件发布者接口，制定发布事件接口，通知所有的监听者listeners，由ApplicationContext接口继承，后续在AbstractApplicationContext中实现
 
 6）ApplicationEventMulticaster
-- 应用事件广播接口，制定添加监听者和移除监听者接口，以及广播应用事件给合适的监听者
+- 应用事件广播接口，制定添加监听者和移除监听者接口，以及广播应用事件给合适的监听者，AbstractApplicationContext依赖这个应用事件广播接口
 
 7）AbstractApplicationEventMulticaster
 - 抽象类，实现ApplicationEventMulticaster，负责获得适合该事件的监听者，以及判断该监听者是否符合处理该事件
 
 8）SimpleApplicationEventMulticaster
 - 继承AbstractApplicationEventMulticaster，实现广播应用事件给合适的监听者的接口
+
+9）ApplicationListener
+- 应用监听器，监听对应的事件类

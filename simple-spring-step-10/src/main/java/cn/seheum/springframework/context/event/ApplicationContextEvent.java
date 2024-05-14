@@ -2,6 +2,9 @@ package cn.seheum.springframework.context.event;
 
 import cn.seheum.springframework.context.ApplicationEvent;
 
+/**
+ * 应用上下文事件，继承ApplicationEvent
+ */
 public class ApplicationContextEvent extends ApplicationEvent {
     /**
      * Constructs a prototypical Event.

@@ -2,6 +2,9 @@ package cn.seheum.springframework.context;
 
 import java.util.EventObject;
 
+/**
+ * 抽象类应用事件
+ */
 public abstract class ApplicationEvent extends EventObject {
     /**
      * Constructs a prototypical Event.

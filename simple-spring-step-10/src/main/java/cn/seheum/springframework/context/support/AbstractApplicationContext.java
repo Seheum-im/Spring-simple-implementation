@@ -72,6 +72,10 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
         }
     }
 
+    /**
+     * 发布事件
+     * @param event the event to publish
+     */
     @Override
     public void publishEvent(ApplicationEvent event) {
         applicationEventMulticaster.multicastEvent(event);
